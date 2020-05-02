@@ -1,0 +1,58 @@
+<html>
+	<head>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+		<script src="js/main.js" type="text/javascript"></script>
+		<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+		<link rel="stylesheet" href="http://demos.jquerymobile.com/1.4.0/theme-classic/theme-classic.css" />	
+		<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+		<script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+		
+	</head>
+	<body>
+		<div data-role="page">
+	
+			<div  data-role="header">
+				<h3></h3>
+			</div>
+		
+			<div role="main" class="ui-content">
+			<form>
+				<div class="ui-field-contain">
+					<select id="VendorDropdown">
+				    </select>
+				</div>
+			    <br>
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" id="fProductName" value="" placeholder="Product">
+				<br>
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" id="fProductDescription" value="" placeholder="Description">
+				<br>
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" id="fProductQuantity" value="" placeholder="Quantity">
+				<br>
+				<br>	
+				<select id="DefaultImageProductDropdown">
+				  <option value="1">iphone7plus</option>
+				  <option value="2">books</option>
+				  <option value="3">computer</option>
+				  <option value="4">clothes</option>
+				</select>
+				<br>
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;<button id="fProductSavebtn">Save</button>
+
+			</form>
+
+				<script>
+					displayVendorDetails();
+				</script>
+		
+			</div>
+		
+			<div data-role="footer">
+			</div>
+	</div>	
+	
+	</body>
+</html>

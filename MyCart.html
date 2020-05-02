@@ -1,0 +1,64 @@
+<html>
+	<head>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+		<script src="js/main.js" type="text/javascript"></script>
+		<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+  		<link rel="stylesheet" href="themes/jquery.mobile.icons.min.css" />
+		<link rel="stylesheet" href="http://demos.jquerymobile.com/1.4.0/theme-classic/theme-classic.css" />
+		<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+		<script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+		
+	</head>
+	<body>
+		<div data-role="page">
+	
+			<div  data-role="header">
+				<h3 id="header2"></h1>
+				<div id="tabs" data-role="navbar">
+				<ul>
+					<li><a href="Welcome.html" data-icon="camera">VendorList</a></li>
+					<li><a class="ui-btn-active" href="MyCart.html" data-icon="heart">MyCart</a></li>
+					<li><a href="MyProfile.html" data-icon="mail">MyProfile</a></li>
+				</ul>
+				<li>
+
+				</li>	
+				</div>
+			</div>
+		
+			<div role="main" class="ui-content">
+				
+				<ul id="mycartlist" data-autodividers="true" data-filter = "true" data-inset="true" data-role="listview">
+
+				</ul>
+				
+				<script>
+					$(document).ready(function(){
+					$("#header2").html("WELCOME TO: "+localStorage.getItem("Name"));
+					var value3 = localStorage.getItem("Email");
+					displayCartDetails();
+					
+					$("#mycartlist").on('click', 'li', function(){	
+		
+						var text = $(this).text();
+						var value = splitMethod(text);
+						alert(value);
+						$(document).on("click", "#DeleteMyCart", function(){
+							
+							DeleteMyCart(value,value3);
+							});	
+						
+						});	
+					});	
+				</script>
+		
+			</div>
+		
+			<div data-role="footer">
+			
+	
+			</div>
+	</div>		
+	
+	</body>
+</html>
